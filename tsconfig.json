@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "compileOnSave": false,
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny":false,
+        "sourceMap": true,
+        "removeComments":true,
+        "typeRoots": [ "./node_modules/@types" ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+}
