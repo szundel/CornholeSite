@@ -65,9 +65,8 @@ export class Server {
    */
   public config() {
     //add static paths
-    this.app.use(express.static(path.join(__dirname,"public")));
     this.app.use(express.static(path.join(__dirname,"views")));
-    this.app.use(express.static(path.join(__dirname,"routes")));
+    this.app.use(express.static(path.join(__dirname,"dist/client")));
     //use logger middlware
     this.app.use(logger("dev"));
 

@@ -1,5 +1,5 @@
 module Root{
-  export class BaseViewModel{
+  export class BaseViewModel {
     knockoutSubscriptions: KnockoutSubscription[];
     constructor(){
       this.knockoutSubscriptions = [];

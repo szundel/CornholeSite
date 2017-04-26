@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" id="bindingContainer">
-  <head>
-    <title data-bind="text: title"></title>
-    <script type="text/javascript">
-      var rootViewModel = new CornholeContentViewModel();
-      ko.applyBindings(rootViewModel,$("#bindingContainer"))
-    </script>
-  </head>
-  <body>
+<title data-bind="text: title, value:console.log($data)"></title>
+<head>
+  <title data-bind="text: title"></title>
+  <script src="http://localhost:1337/clientjs/third-party.js"></script>
+  <script src="http://localhost:1337/clientjs/client-ts.js"></script>
+  <script type="text/javascript">
+    $(function() {
+          var rootViewModel = new CornholeContentViewModel();
+          ko.applyBindings(rootViewModel, $("#bindingContainer"));
+        })
+  </script>
+</head>
+<body>
   <div>
+  TEST
   </div>
-  </body>
+</body>
 </html>
