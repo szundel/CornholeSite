@@ -3,18 +3,27 @@
 <title data-bind="text: title, value:console.log($data)"></title>
 <head>
   <title data-bind="text: title"></title>
-  <script src="http://localhost:1337/clientjs/third-party.js"></script>
-  <script src="http://localhost:1337/clientjs/client-ts.js"></script>
+  <script src="http://localhost:1337/third-party.js"></script>
+  <script src="http://localhost:1337/client-ts.js"></script>
+  <!-- remove once bootstrap 4 is release -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script type="text/javascript">
     $(function() {
-          var rootViewModel = new CornholeContentViewModel();
-          ko.applyBindings(rootViewModel, $("#bindingContainer"));
-        })
+      var rootViewModel = new Cornhole.CornholeContentViewModel();
+      ko.applyBindings(rootViewModel, $("#bindingContainer"));
+    })
   </script>
 </head>
+
 <body>
-  <div>
-  TEST
+  <div data-bind="text: title">
+    TEST
   </div>
+  <input data-bind="value: name"/>
+  <span data-bind="text:name"></span>
 </body>
+
 </html>

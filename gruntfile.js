@@ -61,22 +61,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin: {
-      options: {
-        mergeIntoShorthands: false,
-        roundingPrecision: -1
-      },
-      target: {
-        files: [{
-          expand: true,
-          cwd: 'dist/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'dist/css',
-          ext: '.min.css',
-          sourceMap: true
-        }]
-      }
-    },
     watch: {
       ts: {
         files: ["src/\*\*/\*.ts"],
@@ -97,8 +81,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.registerTask("default", [
-    "clean",
-    "cssmin",
+    "clean:build",
     "copy",
     "ts",
     "concat"
