@@ -106,7 +106,7 @@ export class Server {
     router = express.Router();
     //IndexRoute
     IndexRoute.create(router);
-
+    
     //use router middleware
     this.app.use(router);
   }
