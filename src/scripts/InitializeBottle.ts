@@ -3,10 +3,10 @@ module Root {
 
     export class InitializeBottle {
         init = () => {
-            if (!(<any>window).bottle) {
-                (<any>window).bottle = new Bottle();
-                (<any>window).bottle.service("htmlLookup", HtmlCacheLookup);
-            }
+            //if (!(<any>window).bottle) {
+               // (<any>window).bottle = new Bottle();
+               // (<any>window).bottle.service("htmlLookup", HtmlCacheLookup);
+           // }
         }
     }
 }

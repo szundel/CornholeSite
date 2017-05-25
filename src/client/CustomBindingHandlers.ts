@@ -65,7 +65,7 @@ var getTemplate = (name) => () => {
 
             head.appendChild(scriptTag);
             loaded(true);
-            PubSub.publish(Constants.pubSub.TemplateLoaded, name);
+            PubSub.publish("Template_Loaded", name);
         });
     }
 

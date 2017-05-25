@@ -3,7 +3,7 @@ module Root{
     bottle:any;
     constructor(){
       super();
-      this.bottle = new InitializeBottle().init();
+      //this.bottle = new InitializeBottle().init();
     }
   }
 }

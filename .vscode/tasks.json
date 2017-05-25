@@ -1,26 +1,26 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "isShellCommand": true,
-    "args": ["--no-color"],
-    "showOutput": "always",
+	// See http://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "0.1.0",
+	"command": "gulp",
+	"isShellCommand": true,
+	"args": ["--no-color"],
+	"showOutput": "always",
     "tasks": [
-        {        
-            "taskName": "startSite",
-            "command": "npm",
-            "args": [
-                "start"
-            ],
-            "isShellCommand": true
-        },{
-            "taskName": "runGrunt",
-            "command": "npm",
-            "args": [
-                "run",
-                "grunt"
-            ],
-            "isShellCommand": true
+        {
+            "taskName": "clean",
+            "isShellCommand": true,
+            "showOutput": "always"
+        },
+        {
+			"taskName": "thirdparty",
+			"isShellCommand": true,
+			"showOutput": "always"
+		},
+        {
+            "taskName": "default",
+            "isShellCommand": true,
+            "showOutput": "always"
         }
     ]
 }
